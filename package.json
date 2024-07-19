@@ -1,24 +1,17 @@
 {
-  "name": "mimiho-team-project",
+  "name": "mimino",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://opanchen.github.io/mimiho",
+  "homepage": "https://github.com/opanchen/mimiho/",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /mimiho/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/opanchen/mimiho.git"
-  },
-  "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/opanchen/mimino.git/"
   },
   "dependencies": {
-    "gh-pages": "^6.1.1",
     "jquery": "^3.6.1",
     "modern-normalize": "^1.1.0",
     "swiper": "^8.4.5"
