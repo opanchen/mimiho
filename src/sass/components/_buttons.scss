@@ -1,0 +1,97 @@
+.main-button {
+    @media screen and (max-width: 413px) {
+        width: 100%;
+    }
+    display: block;
+    min-width: 236px;
+    padding: 12px 21px;
+
+    color: $color-brand;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    text-align: center;
+
+    border-radius: $border-radius-big;
+    cursor: pointer;
+
+    transition: background-color $transition-time $cubic-bezier, color $transition-time $cubic-bezier;
+
+    &--translucent {
+        background-color: $bg-button;
+        border: 2px solid $color-white;
+    
+        &:hover,
+        &:focus {
+            background-color: $color-white;
+        }
+    }
+
+    &--dark {
+        background-color: $color-black;
+        border: 2px solid $color-white;
+    
+        &:hover,
+        &:focus {
+            background-color: $color-white;
+            border-color: $color-brand;
+        }
+    }
+
+    &--dark-table {
+        background-color: $color-black;
+        border: 2px solid $bg-light;
+
+        &:hover,
+        &:focus {
+            background-color: $color-white;
+            border-color: $color-brand;
+        }
+    }
+}
+
+.book-button {
+    @media screen and (max-width: 413px) {
+        width: 100%;
+    }
+    display: block;
+    width: 384px;
+    height: 64px;
+    border-radius: $border-radius-big;
+    border: 1px solid $color-brand;
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: $color-black;
+    transition: background-color $transition-time $cubic-bezier, color $transition-time $cubic-bezier;
+    @include tablet-up {
+        font-size: 24px;
+        line-height: 1.21;
+        // padding: 17px 38px 16px;
+        width: 434px;
+    }
+    &--modal {
+        @media screen and (max-width: 413px) {
+            width: 100%;
+        }
+        width: 384px;
+        border-radius: $border-radius-small;
+        @include tablet-up {
+            width: 592px;
+        }
+    }
+    &:hover,
+    &:focus {
+        color: $color-black;
+        background-color: $color-brand;
+    }
+  }

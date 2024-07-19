@@ -1,0 +1,136 @@
+<div class="modal" data-modal="room">
+  <button type="button" class="close-btn js-modal-close" data-modal-close>
+    <svg class="close-icon" width="24" height="24">
+      <use href="./images/icons.svg#icon-close"></use>
+    </svg>
+  </button>
+
+  <form name="contact-form" class="modal-form">
+    <h2 class="modal-title">Забронювати номер</h2>
+    <div class="inputs-box">
+      <div class="first-inputs-column">
+        <div class="field">
+          <div class="form-control">
+            <input
+              type="text"
+              name="person-name"
+              id="person-name"
+              class="form-input"
+              placeholder="Ваше ім'я"
+            />
+          </div>
+          <label for="person-name" class="form-label"
+            >На кого забронювати номер?</label
+          >
+        </div>
+
+        <div class="select-container-room-enter">
+          <div class="select-room-enter">
+            <input
+              type="text"
+              id="input-room-enter"
+              placeholder="Сьогодні"
+              onfocus="this.blur();"
+            />
+          </div>
+          <div class="option-container-room-enter">
+            <div class="option-room-enter">
+              <label>Сьогодні</label>
+            </div>
+            <div class="option-room-enter">
+              <label>Завтра</label>
+            </div>
+            <div class="option-room-enter">
+              <label>Через день</label>
+            </div>
+            <div class="option-room-enter">
+              <label>Через 2 дні</label>
+            </div>
+            <div class="option-room-enter">
+              <label>Через 3 дні</label>
+            </div>
+            <div class="option-room-enter">
+              <label>Через 4 дні</label>
+            </div>
+          </div>
+          <label for="input-room-enter" class="form-label">Дата заїзду</label>
+        </div>
+      </div>
+
+      <div class="second-inputs-column">
+        <div class="field">
+          <div class="form-control">
+            <input
+              type="tel"
+              name="person-tel"
+              id="person-tel"
+              class="form-input"
+              placeholder="+38 (___) ___-__-__"
+            />
+          </div>
+          <label for="person-tel" class="form-label">Номер телефону</label>
+        </div>
+
+        <div class="select-container-room-type">
+          <div class="select-room-type">
+            <input
+              type="text"
+              id="input-room-type"
+              placeholder="Двомісний люкс"
+              onfocus="this.blur();"
+            />
+          </div>
+          <div class="option-container-room-type">
+            <div class="option-room-type">
+              <label>Двомісний люкс</label>
+            </div>
+            <div class="option-room-type">
+              <label>Трьохмісний</label>
+            </div>
+            <div class="option-room-type">
+              <label>Двомісний</label>
+            </div>
+          </div>
+          <label for="input-room-type" class="form-label"
+            >Категорія номеру</label
+          >
+        </div>
+
+        <div class="select-container-room-exit">
+          <div class="select-room-exit">
+            <input
+              type="text"
+              id="input-room-exit"
+              placeholder="Сьогодні"
+              onfocus="this.blur();"
+            />
+          </div>
+          <div class="option-container-room-exit">
+            <div class="option-room-exit">
+              <label>Сьогодні</label>
+            </div>
+            <div class="option-room-exit">
+              <label>Завтра</label>
+            </div>
+            <div class="option-room-exit">
+              <label>Через день</label>
+            </div>
+            <div class="option-room-exit">
+              <label>Через 2 дні</label>
+            </div>
+            <div class="option-room-exit">
+              <label>Через 3 дні</label>
+            </div>
+            <div class="option-room-exit">
+              <label>Через 4 дні</label>
+            </div>
+          </div>
+          <label for="input-room-exit" class="form-label">Дата виїзду</label>
+        </div>
+      </div>
+    </div>
+  </form>
+  <button type="submit" class="book-button book-button--modal">
+    Оформити бронювання
+  </button>
+</div>

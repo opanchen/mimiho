@@ -1,0 +1,402 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $transition-time $cubic-bezier, visibility $transition-time $cubic-bezier;
+
+    background-color: rgba(26, 22, 22, 0.7);
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+.modal {
+    
+    opacity: 0;
+    z-index: 11;
+    pointer-events: none;
+    overflow: auto;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5) rotate(180deg);
+    width: 414px;
+    max-height: 100vh;
+    padding: 60px 15px;
+
+
+    background-color: #FFFDEE;
+    border-radius: 4px;
+    transition: transform $transition-time $cubic-bezier, box-shadow $transition-time $cubic-bezier;
+
+    @media screen and (max-width: 413px) {
+        width: 100%;
+    }
+
+    @include tablet-up {
+        width: 712px;
+        padding: 60px;
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1) rotate(360deg);
+    }
+
+}
+
+
+.room {
+    min-height: 780px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: inherit;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    border: none;
+    // !!! Замінив іконку в спрайті на коректну, підключив
+    // !!! Колір конкретно цієї іконки задається через stroke (не через fill)
+    stroke: $color-black;
+    transition: stroke $transition-time $cubic-bezier;
+
+    &:hover, &:focus, &:active {
+        stroke: $color-brand;
+    }
+}
+
+.modal-title {
+    margin-bottom: 40px;
+
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-black;
+
+    @include tablet-up {
+        font-size: 40px;
+        line-height: 1.15;
+    }
+
+}
+
+.modal-subtitle {
+    margin-bottom: 28px;
+
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: #808080;
+}
+
+.modal-form {
+    width: 100%;
+}
+
+.form-label {
+    display: inline-block;
+    color: $color-brand-dark;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    padding-left: 12px;
+    font-family: 'Montserrat';
+}
+
+.form-control {
+    position: relative;
+}
+
+.inputs-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include tablet-up {
+        flex-direction: row;
+        gap: 16px;
+    }
+}
+
+.first-inputs-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include tablet-up {
+        gap: 0;
+        justify-content: space-between;
+    }
+}
+
+.second-inputs-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include tablet-up {
+        gap: 28px;
+    }
+}
+
+.first-column1 {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    justify-content: space-between;
+    height: 312px;
+}
+      
+    
+.second-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+    
+.form-input {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+    color: #808080;
+    font-family: 'Times New Roman';
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100%;
+    height: 64px;
+    border: 1px solid $color-brand-dark;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+}
+
+.select-container-table-type,
+.select-container-table-date,
+.select-container-night,
+.select-container-room-type,
+.select-container-room-enter,
+.select-container-room-exit {
+    position: relative;
+    width: 100%;
+    min-width: 288px;
+    margin-top: 0px;
+}
+
+.select-table-type,
+.select-table-date,
+.select-night,
+.select-room-type,
+.select-room-enter,
+.select-room-exit {
+    position: relative;
+    background: white;
+    width: 100%;
+    height: 64px;
+    border: 1px solid $color-brand-dark;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+}
+
+
+
+
+.select-table-type input,
+.select-table-date input,
+.select-night input,
+.select-room-type input,
+.select-room-enter input,
+.select-room-exit input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #808080;
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.05em;
+}
+
+
+.select-table-type::after,
+.select-table-date::after,
+.select-night::after,
+.select-room-type::after,
+.select-room-enter::after,
+.select-room-exit::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 40%;
+    right: 15px;
+    transform: translateY(-50%) rotate(45deg);
+    border-bottom: 2px solid $color-brand-dark;
+    border-right: 2px solid $color-brand-dark;
+    cursor: pointer;
+}
+
+.select-container-table-type.active .select-table-type::after,
+.select-container-table-date.active .select-table-date::after,
+.select-container-night.active .select-night::after,
+.select-container-room-type.active .select-room-type::after,
+.select-container-room-enter.active .select-room-enter::after,
+.select-container-room-exit.active .select-room-exit::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    top: 40%;
+    right: 15px;
+    transform: translateY(-50%) rotate(225deg);
+    border-bottom: 2px solid $color-brand-dark;
+    border-right: 2px solid $color-brand-dark;
+    cursor: pointer;
+}
+
+.option-container-table-type,
+.option-container-table-date,
+.option-container-night,
+.option-container-room-type,
+.option-container-room-enter,
+.option-container-room-exit {
+    position: relative;
+    background: white;
+    height: 0;
+    width: 100%;
+    overflow-y: scroll;
+    transition: 0.4s;
+}
+
+.option-container-table-type::-webkit-scrollbar,
+.option-container-table-date::-webkit-scrollbar,
+.option-container-night::-webkit-scrollbar,
+.option-container-room-type::-webkit-scrollbar,
+.option-container-room-enter::-webkit-scrollbar,
+.option-container-room-exit::-webkit-scrollbar {
+    width: 3px;
+}
+
+.option-container-table-type::-webkit-scrollbar-thumb,
+.option-container-table-date::-webkit-scrollbar-thumb,
+.option-container-night::-webkit-scrollbar-thumb,
+.option-container-room-type::-webkit-scrollbar-thumb,
+.option-container-room-enter::-webkit-scrollbar-thumb,
+.option-container-room-exit::-webkit-scrollbar-thumb {
+    background: $color-brand-dark;
+}
+
+.select-container-table-type.active .option-container-table-type,
+.select-container-table-date.active .option-container-table-date,
+.select-container-night.active .option-container-night,
+.select-container-room-type.active .option-container-room-type,
+.select-container-room-enter.active .option-container-room-enter,
+.select-container-room-exit.active .option-container-room-exit {
+    height: 240px;
+}
+
+.option-table-type,
+.option-table-date,
+.option-night,
+.option-room-type,
+.option-room-enter,
+.option-room-exit {
+    position: relative;
+    padding-left: 15px;
+    height: 60px;
+    border-bottom: 1px solid $color-brand-dark;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.option-table-type:hover,
+.option-table-date:hover,
+.option-night:hover,
+.option-room-type:hover,
+.option-room-enter:hover,
+.option-room-exit:hover {
+    background: rgba(0, 0, 0, 0.2);
+    padding-left: 20px;
+}
+
+.option-table-type.selected,
+.option-table-date.selected,
+.option-night.selected,
+.option-room-type.selected,
+.option-room-enter.selected,
+.option-room-exit.selected {
+    background-color: #F3C653;
+    pointer-events: none;
+}
+
+.option-table-type label,
+.option-table-date label,
+.option-night label,
+.option-room-type label,
+.option-room-enter label,
+.option-room-exit label {
+    color: #808080;
+    font-family: 'Times New Roman';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+// !!! Cелектор для кнопки модалки
+// !!! Основні стилі в _buttons.scss, тут лише позиціонування
+.book-button--modal {
+    display: block;
+    margin-top: 40px;
+}
+
+.price {
+    border: none;
+    padding: 0;
+}

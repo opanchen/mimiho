@@ -1,0 +1,35 @@
+{
+  "name": "mimiho-team-project",
+  "version": "2.0.0",
+  "description": "",
+  "homepage": "https://opanchen.github.io/mimiho",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /mimiho/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opanchen/mimiho.git"
+  },
+  "keywords": [],
+  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+  },
+  "dependencies": {
+    "gh-pages": "^6.1.1",
+    "jquery": "^3.6.1",
+    "modern-normalize": "^1.1.0",
+    "swiper": "^8.4.5"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.6.0",
+    "@parcel/transformer-sass": "^2.6.0",
+    "@parcel/transformer-webmanifest": "^2.6.0",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}

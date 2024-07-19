@@ -1,0 +1,168 @@
+.restaurant-menu {
+    background-color: $bg-dark;
+}
+
+.restaurant-menu__gradient{
+    padding: 32px 0;
+
+    @include tablet-up {
+        padding: 58px 0 40px;
+    }
+
+    @include desktop-up {
+        padding: 58px 0 60px;
+    }
+}
+
+.menu-list {
+    //todo Позиціоную таблиці між собою на флексах
+    //todo спочатку вертикально, потім - горизонтально
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+
+    @include tablet-up {
+        flex-direction: row;
+        gap: 88px;
+        margin-bottom: 60px;
+    }
+
+    @include desktop-up {
+        gap: 140px;
+        margin-bottom: 40px;
+    }
+}
+
+.menu__table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table tr {
+    padding: 4px 0;
+}
+
+.restaurant-menu__section-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: $color-black;
+    font-size: 32px;
+    line-height: 1.16;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+
+    @media screen and (min-width:320px) and (max-width:400px) {
+        font-size: 28px;
+    }
+
+    @include tablet-up {
+        margin-bottom: 40px;
+    }
+}
+
+.dish-type {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: $color-black;
+    text-align: left;
+
+    @include tablet-up {
+        margin-bottom: 20px;
+    }
+
+    @include desktop-up {
+        font-size: 24px;
+        line-height: 1.167;
+    }
+}
+
+//todo флекс
+.menu-list__item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include tablet-up {
+        gap: 20px;
+    }
+}
+
+.dish {
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.214;
+    color: $color-black;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+    display: inline-block;
+
+    @include desktop-up {
+        font-size: 16px;
+        line-height: 1.25;
+    }
+}
+
+.menu-list__ingredients {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+    color: $color-black;
+    letter-spacing: 0.02em;
+}
+
+.menu-list__weight {
+    font-family: Montserrat;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.214;
+    color: $color-black;
+    letter-spacing: 0.02em;
+    text-align: left;
+    padding-left: 40px;
+
+    @media screen and (min-width:320px) {
+        padding-left: 20px;
+    }
+
+    @media screen and (min-width:370px) {
+        padding-left: 30px;
+    }
+
+    @include tablet-up {
+        padding-left: 50px;
+    }
+
+    @include desktop-up {
+        padding-left: 67px;
+    }
+}
+
+.menu-list__cost {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.214;
+    color: $color-black;
+    letter-spacing: 0.02em;
+    text-align: right;
+
+    @include desktop-up {
+        font-size: 16px;
+        line-height: 1.25;
+    }
+}
+
+.restaurant-menu__button {
+    margin-left: auto;
+    margin-right: auto;
+
+    @include tablet-up {
+        margin-right: 0;
+    }
+}
