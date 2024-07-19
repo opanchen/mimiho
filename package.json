@@ -1,17 +1,17 @@
 {
-  "name": "mimiho-team-project",
+  "name": "mimiho",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://opanchen.github.io/mimiho-team-project",
+  "homepage": "https://opanchen.github.io/mimiho",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /mimiho-team-project/",
+    "build": "parcel build src/*.html --public-url /mimiho/",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/opanchen/mimiho-team-project.git"
+    "url": "git+https://github.com/opanchen/mimiho.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
